@@ -1,0 +1,5 @@
+[
+  { "username": "test.user1", "password": "CHANGE_ME", "expected": "success" },
+  { "username": "test.user2", "password": "CHANGE_ME", "expected": "success" },
+  { "username": "test.user1", "password": "wrong-password", "expected": "failure" }
+]

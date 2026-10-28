@@ -1,0 +1,11 @@
+node_modules/
+test-results/
+playwright-report/
+.env
+auth/
+data/testUsers.json
+
+Claude outputs/
+_to_delete/
+*.xlsx
+.DS_Store

@@ -1,0 +1,28 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "azbu:login": "playwright test --project=setup --headed",
+    "azbu:record": "node scripts/record.js",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report",
+    "test:quick": "playwright test --project=azbu --no-deps --headed",
+    "generate": "node data/customerGenerator.js",
+    "test:order": "playwright test --project=azbu --no-deps --headed --workers=1 tests/sales-order.spec.js -g \"company customer\"",
+    "test:order:10": "playwright test --project=azbu --no-deps --workers=10 --fully-parallel --repeat-each=5 tests/sales-order.spec.js",
+    "orders": "node scripts/runOrders.js",
+    "test:stress1": "playwright test --project=azbu --no-deps --fully-parallel --workers=10 tests/stresstest1.spec.js",
+    "test:users:invoice": "playwright test --project=azbu --no-deps --fully-parallel --workers=15 tests/user-invoice.spec.js",
+    "test:login": "playwright test --project=azbu --no-deps --fully-parallel --workers=10 tests/login.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "dotenv": "^18.0.6"
+  }
+}
