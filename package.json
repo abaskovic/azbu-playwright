@@ -14,7 +14,8 @@
     "test:order": "playwright test --project=azbu --no-deps --headed --workers=1 tests/sales-order.spec.js -g \"company customer\"",
     "test:order:10": "playwright test --project=azbu --no-deps --workers=10 --fully-parallel --repeat-each=5 tests/sales-order.spec.js",
     "orders": "node scripts/runOrders.js",
-    "test:stress1": "playwright test --project=azbu --no-deps --fully-parallel --workers=10 tests/stresstest1.spec.js",
+    "test:stress1": "playwright test --project=azbu --no-deps --fully-parallel --workers=20 tests/stresstest1.spec.js",
+    "test:stress1:v2": "playwright test --project=azbu --no-deps --fully-parallel --headed   --workers=5 tests/stresstest1-v2.spec.js",
     "test:users:invoice": "playwright test --project=azbu --no-deps --fully-parallel --workers=15 tests/user-invoice.spec.js",
     "test:login": "playwright test --project=azbu --no-deps --fully-parallel --workers=10 tests/login.spec.js"
   },
